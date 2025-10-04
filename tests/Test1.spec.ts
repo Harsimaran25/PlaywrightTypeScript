@@ -3,7 +3,7 @@
 let message:string ='This is a string message';
 console.log(message);
 
-let num : number = 44,
+let num : number = 44;
 
 let arry : number[] = [33,44,555,22];
 
