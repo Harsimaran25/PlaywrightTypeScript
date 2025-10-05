@@ -1,3 +1,6 @@
+
+import { Locator, Page } from "playwright";
+
 let message:string ='This is a string message';
 console.log(message);
 
@@ -19,9 +22,25 @@ console.log('non interface', person.name)
 //another way is using interface
 
 interface Person{
-    name: string,
+    name: string;
     age : number
 }
 
 let person1 : Person ={ name : 'bob',age : 34};
 console.log(person1.name);
+
+
+// class declartion
+
+class cart {
+
+   readonly page: Page;
+   readonly cartProducts : Locator;
+
+   constructor( page : Page)
+   {
+
+    this.page=page;
+    this.cartProducts=page.locator('#login');
+   }
+}
